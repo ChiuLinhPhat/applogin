@@ -8,3 +8,5 @@ fastapi-login==1.8.2
 pydantic==1.9.1
 PyJWT==2.4.0
 loguru==0.6.0
+bcrypt==3.2.2
+pytz

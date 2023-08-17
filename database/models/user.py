@@ -8,8 +8,8 @@ class Users(Document):
     id = ObjectId()
     name = StringField(required=True)
     email = EmailField(sparse=True, unique=True, required=True)
-    auth_level2 = BooleanField(default=False)
-    hash_password = StringField(required=True)
+    passwords = StringField(required=True)
+    hash_passwords = StringField(required=True)
     createdAt = IntField(default=time.time())
 
     def to_json(self):
@@ -17,7 +17,7 @@ class Users(Document):
             "id": str(self.pk),
             "name": self.name,
             "email": self.email,
-            "auth_level2": self.auth_level2,
+            "hash_passwords": self.hash_passwords,
             "createdAt": self.createdAt
         }
 

@@ -33,14 +33,3 @@ class checkOtp:
         self.opt = opt
 
 
-class resetPass:
-
-    def __init__(
-            self,
-            email: str = Form(...),
-            opt: str = Form(...),
-            password: str = Form()
-    ):
-        self.email = email
-        self.opt = opt
-        self.password = password
